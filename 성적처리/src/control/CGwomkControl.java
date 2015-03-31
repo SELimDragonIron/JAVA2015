@@ -1,6 +1,5 @@
 package control;
 
-import entity.CGwamok;
 
 public class CGwomkControl {
 

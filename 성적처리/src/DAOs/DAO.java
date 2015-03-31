@@ -9,14 +9,11 @@ import java.io.ObjectOutputStream;
 
 public class DAO {
 	
-	
-	
-	
 	public void write(Object object,String fileName) {
-		//serialize = 소크 코드의 변화를 안주도록 설계
+		
 		try {
 			
-			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("fileName"));
+			ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(fileName));
 			out.writeObject(object);
 			out.close();
 		} catch (IOException e) {
@@ -31,7 +28,7 @@ public class DAO {
 		
 			try {
 				ObjectInputStream in;
-				in = new ObjectInputStream(new FileInputStream("fileName"));
+				in = new ObjectInputStream(new FileInputStream(fileName));
 				object = in.readObject();
 				in.close();
 			} catch (FileNotFoundException e) {

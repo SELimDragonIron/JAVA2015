@@ -2,7 +2,7 @@ package view;
 
 import entity.CGangjwa;
 
-public class GangjwaView {
+public class CGangjwaView {
 
 	 public CGangjwa getgangjwa() {
 		CGangjwa gangjwa =new CGangjwa();
